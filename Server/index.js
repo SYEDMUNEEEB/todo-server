@@ -18,3 +18,6 @@ mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true, useUnifiedTopo
   app.use('/', TodoItemRoute);
 //connect to server
 app.listen(PORT, ()=> console.log("Server connected") );
+app.get('/', (req, res) => {
+  res.send('Hey this is my API running 🥳')
+})
